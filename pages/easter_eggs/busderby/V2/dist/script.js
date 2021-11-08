@@ -414,26 +414,26 @@ function handleKeyDown ( keyEvent ) {
   switch ( keyEvent.keyCode ) {
     // BUS 1
     // pivots wheels for steering
-    case 65: case 37:  // "a" key or left arrow key (turn left)
+    case 65: case 37:  // "a"65 key or "left arrow"37 key (turn left)
       busArray[0].wheel_fr_constraint.configureAngularMotor( 1, -Math.PI / 4, Math.PI / 4, 10, 200 );
       busArray[0].wheel_fr_constraint.enableAngularMotor( 1 );
       busArray[0].wheel_fl_constraint.configureAngularMotor( 1, -Math.PI / 4, Math.PI / 4, 10, 200 );
       busArray[0].wheel_fl_constraint.enableAngularMotor( 1 );
     break;
-    case 68: case 39:  // "d" key  or right arrow key (turn right)
+    case 68: case 39:  // "d"68 key  or "right arrow"39 key (turn right)
       busArray[0].wheel_fr_constraint.configureAngularMotor( 1, -Math.PI / 4, Math.PI / 4, -10, 200 );
       busArray[0].wheel_fr_constraint.enableAngularMotor( 1 );
       busArray[0].wheel_fl_constraint.configureAngularMotor( 1, -Math.PI / 4, Math.PI / 4, -10, 200 );
       busArray[0].wheel_fl_constraint.enableAngularMotor( 1 );
     break;
     // rotates wheels for propulsion
-    case 87: case 38: // "w" key or up arrow key (forward)
+    case 87: case 38: // "w"87 key or "up arrow"38 key (forward)
       busArray[0].wheel_bl_constraint.configureAngularMotor( 2, 1, 0, -30, 50000 );
       busArray[0].wheel_bl_constraint.enableAngularMotor( 2 );
       busArray[0].wheel_br_constraint.configureAngularMotor( 2, 1, 0, -30, 50000 );
       busArray[0].wheel_br_constraint.enableAngularMotor( 2 );
     break;
-    case 83: case 40:  // "s" key or down arrow key (backward)
+    case 83: case 40:  // "s"83 key or down arrow40 key (backward)
       busArray[0].wheel_bl_constraint.configureAngularMotor( 2, 1, 0, 20, 3500 );
       busArray[0].wheel_bl_constraint.enableAngularMotor( 2 );
       busArray[0].wheel_br_constraint.configureAngularMotor( 2, 1, 0, 20, 3500 );
