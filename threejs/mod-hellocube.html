@@ -17,13 +17,20 @@
       renderer.setSize( window.innerWidth, window.innerHeight);
       document.body.appendChild( renderer.domElement);
 
-      const fov = 75;
-      const aspect = window.innerWidth / window.innerHeight;
-      const near = 0.1;
-      const far = 1000;
+      const fov     = 75;
+      const aspect  = window.innerWidth / window.innerHeight;
+      const near    = 0.1;
+      const far     = 1000;
       const camera = new THREE.PerspectiveCamera( fov, aspect, near , far);
-      camera.position.z = 5;
+      camera.position.z = 5
 
+      {
+        const color       = 0xffffff;
+        const intensity   = 1;
+        const light = new THREE.DirectionalLight(color, intesity);
+        light.position.set(-1,2,4);
+        scene.add(light);
+      }
 
 
       const geometry = new THREE.BoxGeometry();
