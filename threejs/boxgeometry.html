@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HelloCube Threejs</title>
+    <style>
+      body{margin:0;}
+    </style>
+  </head>
+  <body>
+    <script type="module">
+      import * as THREE from 'https://cdn.skypack.dev/three'
+
+      const scene = new THREE.Scene();
+
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize( window.innerWidth, window.innerHeight);
+      document.body.appendChild( renderer.domElement);
+
+      const fov     = 75;
+      const aspect  = window.innerWidth / window.innerHeight;
+      const near    = 0.1;
+      const far     = 1000;
+      const camera = new THREE.PerspectiveCamera( fov, aspect, near , far);
+      camera.position.z = 2;
+
+      {
+        const color       = 0xffffff;
+        const intensity   = 1;
+        const light = new THREE.DirectionalLight(color, intensity);
+        light.position.set(-1,2,4);
+        scene.add(light);
+      }
+
+
+      const width = 8;
+
+      const height = 8;
+
+      const depth = 8;
+
+      const widthSegments = 4;
+
+      const heightSegments = 4;
+
+      const depthSegments = 4;  
+
+      const geometry = new THREE.BoxGeometry(
+          width, height, depth,
+          widthSegments, heightSegments, depthSegments);
+
+      const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+
+      const cube = new THREE.Mesh( geometry, material );
+
+      scene.add( cube );
+
+      const animate = function () {
+        requestAnimationFrame( animate );
+
+        cube.rotation.x += 0.015;
+        cube.rotation.y += 0.015;
+
+        renderer.render( scene, camera );
+      }
+
+      animate();
+
+    </script>
+  </body>
+</html>
