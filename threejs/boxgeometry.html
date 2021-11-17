@@ -35,29 +35,25 @@
 
 
       const width = 2;
-
       const height = 2;
-
       const depth = 2;
-
       const widthSegments = 1;
       const heightSegments = 1;
       const depthSegments = 1;
-
       const geometry = new THREE.BoxGeometry(width, height, depth, widthSegments, heightSegments, depthSegments);
 
       const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
 
-      const cube = new THREE.Mesh( geometry, material );
+      const primit = new THREE.Mesh( geometry, material );
 
-      scene.add( cube );
+      scene.add( primit );
 
       const animate = function () {
 
       requestAnimationFrame( animate );
 
-        cube.rotation.x += 0.015;
-        cube.rotation.y += 0.015;
+        primit.rotation.x += 0.015;
+        primit.rotation.y += 0.015;
 
         renderer.render( scene, camera );
       }
