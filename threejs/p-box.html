@@ -40,9 +40,9 @@
       const widthSegments = 1;
       const heightSegments = 1;
       const depthSegments = 1;
-      const geometry = new THREE.BoxGeometry(width, height, depth, widthSegments, heightSegments, depthSegments);
+      const boxGeometry = new THREE.BoxGeometry(width, height, depth, widthSegments, heightSegments, depthSegments);
 
-      const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+      const material = new THREE.MeshPhongMaterial( { color: 0x00ff00, wireframe: true } );
 
       const primit = new THREE.Mesh( geometry, material );
 
