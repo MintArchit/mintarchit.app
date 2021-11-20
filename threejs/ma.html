@@ -81,7 +81,7 @@
             const font = await loadFont('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json');
             const geometry = new THREE.TextGeometry('MintArchit', {
               font: font,
-              size: 5.0,
+              size: 7.0,
               height: 0.5,
               curveSegments: 12,
               bevelEnabled: true,
@@ -106,7 +106,7 @@
           time *= 0.001;
 
           objects.forEach((obj, ndx) => {
-            const speed = .5 + ndx * .05;
+            const speed = .2 + ndx * .02;
             const rot = time * speed;
             obj.rotation.y = rot;
           });
