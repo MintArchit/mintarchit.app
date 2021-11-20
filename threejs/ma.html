@@ -95,7 +95,7 @@
             const garchit = new THREE.TextGeometry('Archit', fontSet);
             const marchit = new THREE.Mesh(garchit, createMaterial("black"));
             garchit.computeBoundingBox();
-            garchit.boundingBox.getCenter(marchit.position).multiplyScalar(-1);
+            garchit.boundingBox.getCenter(marchit.position).multiplyScalar(-2);
             parent.add(marchit);
 
             addObject(0, 0, parent);
