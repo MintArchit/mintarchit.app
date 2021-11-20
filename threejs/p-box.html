@@ -43,13 +43,10 @@
       const boxGeometry = new THREE.BoxGeometry(width, height, depth, widthSegments, heightSegments, depthSegments);
       const boxMaterial = new THREE.MeshPhongMaterial( { color: 0x00ff00} );
 
-      const wMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff , wireframe : true} );
 
       const pBox = new THREE.Mesh( boxGeometry, boxMaterial );
-      const wBox = new THREE.Mesh( boxGeometry, wMaterial );
 
       scene.add( pBox );
-      scene.add( wBox );
 
       const animate = function () {
 
