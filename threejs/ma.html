@@ -46,12 +46,12 @@
           objects.push(obj);
         }
 
-        function createMaterial() {
+        function createMaterial(color) {
           const material = new THREE.MeshPhongMaterial({
             side: THREE.DoubleSide,
           });
 
-          material.color.setStyle("springgreen");
+          material.color.setStyle(color);
 
           return material;
         }
@@ -86,7 +86,7 @@
 
             const geometry = new THREE.TextGeometry('MintArchit', fontSet);
 
-            const mesh = new THREE.Mesh(geometry, createMaterial());
+            const mesh = new THREE.Mesh(geometry, createMaterial("springgreen"));
             geometry.computeBoundingBox();
             geometry.boundingBox.getCenter(mesh.position).multiplyScalar(-1);
 
