@@ -72,7 +72,8 @@
 
           async function doit() {
             const font = await loadFont('https://threejsfundamentals.org/threejs/resources/threejs/fonts/helvetiker_regular.typeface.json');
-            const geometry = new THREE.TextGeometry('MintArchit', {
+
+            const fontSet = {
               font: font,
               size: 6.0,
               height: 0.5,
@@ -81,7 +82,9 @@
               bevelThickness: 0.15,
               bevelSize: .05,
               bevelSegments: 5,
-            });
+            }
+
+            const geometry = new THREE.TextGeometry('MintArchit', fontSet);
 
             const mesh = new THREE.Mesh(geometry, createMaterial());
             geometry.computeBoundingBox();
