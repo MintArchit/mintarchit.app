@@ -84,14 +84,19 @@
               bevelSegments: 5,
             }
 
-            const geometry = new THREE.TextGeometry('MintArchit', fontSet);
-
-            const mesh = new THREE.Mesh(geometry, createMaterial("springgreen"));
-            geometry.computeBoundingBox();
-            geometry.boundingBox.getCenter(mesh.position).multiplyScalar(-1);
-
             const parent = new THREE.Object3D();
-            parent.add(mesh);
+
+            const gmint = new THREE.TextGeometry('Mint', fontSet);
+            const mmint = new THREE.Mesh(gmint, createMaterial("springgreen"));
+            gmint.computeBoundingBox();
+            gmint.boundingBox.getCenter(mmint.position).multiplyScalar(-1);
+            parent.add(mmint);
+
+            const garchit = new THREE.TextGeometry('Archit', fontSet);
+            const marchit = new THREE.Mesh(garchit, createMaterial("black"));
+            garchit.computeBoundingBox();
+            garchit.boundingBox.getCenter(mMesh.position).multiplyScalar(-1);            
+            parent.add(marchit);
 
             addObject(0, 0, parent);
           }
