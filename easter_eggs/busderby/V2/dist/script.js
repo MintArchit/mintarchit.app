@@ -441,7 +441,7 @@ function handleKeyDown ( keyEvent ) {
     break;
     // BUS 2
     // pivots wheels for steering
-    case 76: // "l" key (turn left)
+    case 76:  // "l" key (turn left)
       busArray[1].wheel_fr_constraint.configureAngularMotor( 1, -Math.PI / 4, Math.PI / 4, 10, 200 );
       busArray[1].wheel_fr_constraint.enableAngularMotor( 1 );
       busArray[1].wheel_fl_constraint.configureAngularMotor( 1, -Math.PI / 4, Math.PI / 4, 10, 200 );
@@ -460,7 +460,7 @@ function handleKeyDown ( keyEvent ) {
       busArray[1].wheel_br_constraint.configureAngularMotor( 2, 1, 0, 30, 50000 );
       busArray[1].wheel_br_constraint.enableAngularMotor( 2 );
     break;
-    case 186: case:192: // ";" key (backward)
+    case 186:  // ";" key (backward)
       busArray[1].wheel_bl_constraint.configureAngularMotor( 2, 1, 0, -20, 3500 );
       busArray[1].wheel_bl_constraint.enableAngularMotor( 2 );
       busArray[1].wheel_br_constraint.configureAngularMotor( 2, 1, 0, -20, 3500 );
