@@ -58,10 +58,7 @@
             side: THREE.DoubleSide,
           });
 
-          const hue = Math.random();
-          const saturation = 1;
-          const luminance = .5;
-          material.color.setHSL(hue, saturation, luminance);
+          material.color.setStyle(red);
 
           return material;
         }
@@ -85,7 +82,7 @@
             const geometry = new THREE.TextGeometry('MintArchit', {
               font: font,
               size: 3.0,
-              height: 1,
+              height: 0.5,
               curveSegments: 12,
               bevelEnabled: true,
               bevelThickness: 0.15,
@@ -112,7 +109,6 @@
             const speed = .5 + ndx * .05;
             const rot = time * speed;
             obj.rotation.x = rot;
-            obj.rotation.y = rot;
           });
 
           renderer.render(scene, camera);
