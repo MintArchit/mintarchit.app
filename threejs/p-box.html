@@ -41,12 +41,14 @@
       const heightSegments = 1;
       const depthSegments = 1;
       const boxGeometry = new THREE.BoxGeometry(width, height, depth, widthSegments, heightSegments, depthSegments);
+      const boxMaterial = new THREE.MeshPhongMaterial( { color: 0x00ff00 , side: THREE.DoubleSide} );
 
-      const material = new THREE.MeshPhongMaterial( { color: 0x00ff00, wireframe: true } );
+      const wMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff, side: THREE.DoubleSide} );
 
-      const primit = new THREE.Mesh( boxGeometry, material );
+      const pBox = new THREE.Mesh( boxGeometry, boxMaterial );
+      const wBox = new THREE.Mesh( boxGeometry, wMaterial );
 
-      scene.add( primit );
+      scene.add( pBox, wBox );
 
       const animate = function () {
 
