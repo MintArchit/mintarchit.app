@@ -43,17 +43,21 @@
       const boxGeometry = new THREE.BoxGeometry(width, height, depth, widthSegments, heightSegments, depthSegments);
       const boxMaterial = new THREE.MeshPhongMaterial( { color: 0x00ff00} );
 
+      const wMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff , wireframe : true} );
 
       const pBox = new THREE.Mesh( boxGeometry, boxMaterial );
+      const wBox = new THREE.Mesh( boxGeometry, wMaterial );
 
-      scene.add( pBox );
+      scene.add( pBox,wBox );
 
       const animate = function () {
 
       requestAnimationFrame( animate );
 
-        primit.rotation.x += 0.015;
-        primit.rotation.y += 0.015;
+        pBox.rotation.x += 0.015;
+        pBox.rotation.y += 0.015;
+        wBox.rotation.x += 0.015;
+        wBox.rotation.y += 0.015;
 
         renderer.render( scene, camera );
       }
