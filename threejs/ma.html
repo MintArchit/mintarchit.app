@@ -88,8 +88,6 @@
 
             const gmint = new THREE.TextGeometry('Mint', fontSet);
             const mmint = new THREE.Mesh(gmint, createMaterial("springgreen"));
-            gmint.computeBoundingBox();
-            gmint.boundingBox.getCenter(mmint.position).multiplyScalar(-1);
             parent.add(mmint);
 
             const garchit = new THREE.TextGeometry('Archit', fontSet);
