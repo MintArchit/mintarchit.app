@@ -89,13 +89,13 @@
             const gmint = new THREE.TextGeometry('Mint', fontSet);
             const mmint = new THREE.Mesh(gmint, createMaterial("springgreen"));
             gmint.computeBoundingBox();
-            gmint.boundingBox.getCenter(mmint.position).multiplyScalar(-2);
+            gmint.boundingBox.getCenter(mmint.position).multiplyScalar(-1);
             parent.add(mmint);
 
             const garchit = new THREE.TextGeometry('Archit', fontSet);
             const marchit = new THREE.Mesh(garchit, createMaterial("black"));
             garchit.computeBoundingBox();
-            garchit.boundingBox.getCenter(marchit.position).multiplyScalar(0);
+            garchit.boundingBox.getCenter(marchit.position).multiplyScalar(-1);
             parent.add(marchit);
 
             addObject(0, 0, parent);
