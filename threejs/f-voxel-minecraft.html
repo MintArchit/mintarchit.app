@@ -178,8 +178,8 @@
 
     function main() {
     const renderer = new THREE.WebGLRenderer();
+    const cand = document.body.appendChild( renderer.domElement);
     renderer.setSize( window.innerWidth, window.innerHeight);
-    document.body.appendChild( renderer.domElement);
 
     const cellSize = 32;
 
@@ -190,7 +190,7 @@
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
     camera.position.set(-cellSize * .3, cellSize * .8, -cellSize * .3);
 
-    const controls = new OrbitControls(camera);
+    const controls = new OrbitControls(camera, cand);
     controls.target.set(cellSize / 2, cellSize / 3, cellSize / 2);
     controls.update();
 
