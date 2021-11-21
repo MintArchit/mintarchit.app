@@ -495,7 +495,7 @@ function handleKeyUp(keyEvent){
       busArray[1].wheel_fl_constraint.enableAngularMotor( 1 );
 		break;
     //stops back wheel rotation
-     case 80: case 186:
+     case 80: case 186: case 192:
       busArray[1].wheel_bl_constraint.configureAngularMotor( 2, 0, 0, 0, 2000 );
       busArray[1].wheel_bl_constraint.enableAngularMotor( 2 );
       busArray[1].wheel_br_constraint.configureAngularMotor( 2, 0, 0, 0, 2000 );
