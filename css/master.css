@@ -1,1 +1,54 @@
+/* MASTER.CSS 1.0 July 2022 by MintArchit */
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+.anchor{
+  padding:128px 0 0 0;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/mywork/Head3.png");
+  min-height: 100%;
+}
+
+.bgicon {
+  background-color: white;
+  /* border: 3px solid white; */
+  border-radius: 0.3em;
+  /* margin: 4em; */
+  padding: 0.1em;
+}
+
+.bgicon:hover {
+  /* border: 3px solid black; */
+  background-color: black;
+}
+
+.container{
+  padding:0 16 128 16;
+}
+
+.m0-logo{
+  color: #29a87d;
+  font-weight: bold;
+}
+
+.m0-navbar {
+  font-size: 20px;
+}
+
+.fa-linux:hover{
+  color: orange !important;
+  /* background-color: lightblue; */
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
